@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="400dp"
+    android:layout_height="500dp"
+    tools:context=".CameraFragment">
+
+    <SurfaceView
+        android:id="@+id/sv_cameraView"
+        android:layout_width="400dp"
+        android:layout_height="500dp" />
+
+    <ImageButton
+        android:id="@+id/btn_camera"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="bottom|center_horizontal"
+        android:background="@android:drawable/ic_menu_camera" />
+</FrameLayout>

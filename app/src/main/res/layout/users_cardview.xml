@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_usercard"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    card_view:cardBackgroundColor="#FFFFFF"
+    card_view:contentPadding="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/iv_userIMG"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/common_google_signin_btn_text_light_default"
+            android:foreground="@color/common_google_signin_btn_text_light_default"
+            android:scaleType="centerCrop"
+            android:tint="#00FFFFFF"
+            tools:srcCompat="@tools:sample/avatars[10]" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RatingBar
+                android:id="@+id/ratingBar_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:isIndicator="false"
+                android:max="5"
+                android:numStars="5"
+                android:stepSize="0.5" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
+

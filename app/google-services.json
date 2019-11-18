@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "37154767482",
+    "firebase_url": "https://howstoday-5802b.firebaseio.com",
+    "project_id": "howstoday-5802b",
+    "storage_bucket": "howstoday-5802b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:37154767482:android:20fb7f0e71ecc984",
+        "android_client_info": {
+          "package_name": "com.example.howstoday"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "37154767482-66qp7sc32r9pustjscorc3v25lase0ve.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-YJBINxcR_smFyTRk8SPZrqExIPXFNOU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "37154767482-66qp7sc32r9pustjscorc3v25lase0ve.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
