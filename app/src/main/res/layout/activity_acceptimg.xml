@@ -10,50 +10,70 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="100dp"
         android:gravity="center_horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <FrameLayout
-            android:id="@+id/frg_frame"
-            android:layout_width="400dp"
-            android:layout_height="500dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/frg_frame"
+                android:layout_width="400dp"
+                android:layout_height="500dp"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="사진을 선택해주세요." />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/ib_camera"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="10dp"
+                        android:background="@android:drawable/ic_menu_camera" />
+
+                    <ImageButton
+                        android:id="@+id/btn_album"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="10dp"
+                        android:background="@android:drawable/ic_menu_gallery" />
+
+                    <ImageButton
+                        android:id="@+id/btn_start"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="10dp"
+                        android:background="@android:drawable/ic_menu_send" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
 
         <!-- img_user에 사진 이미지가 들어있다면 btn_camera는 invisible-->
         <!-- img_user에 사진 이미지가 들어 있지 않다면 btn_cancel는 invisible-->
     </RelativeLayout>
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintBottom_toBottomOf="parent">
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
-
-            <ImageButton
-                android:id="@+id/btn_album"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_centerInParent="true"
-                android:background="@android:drawable/ic_menu_gallery"  />
-            <!-- btn_gall >>> btn_album -->
-        </RelativeLayout>
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
-            <Button
-                android:id="@+id/btn_start"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_centerInParent="true"
-                android:layout_gravity="center_horizontal"
-                android:background="@android:drawable/ic_menu_send" />
-        </RelativeLayout>
-    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

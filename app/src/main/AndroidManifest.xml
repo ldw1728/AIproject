@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.howstoday">
+    package="com.AIProject.howstoday">
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -16,18 +16,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".DetailActivity"></activity>
+        <activity android:name="com.AIProject.howstoday.DetailActivity"></activity>
         <activity
-            android:name=".UpLoadActivity"
+            android:name="com.AIProject.howstoday.UpLoadActivity"
             android:theme="@android:style/Theme.Dialog" />
-        <activity android:name=".SignupActivity" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".UserBoardActivity" />
+        <activity android:name="com.AIProject.howstoday.SignupActivity" />
+        <activity android:name="com.AIProject.howstoday.LoginActivity" />
+        <activity android:name="com.AIProject.howstoday.UserBoardActivity" />
         <activity
-            android:name=".LoadingActivity"
+            android:name="com.AIProject.howstoday.LoadingActivity"
             android:theme="@android:style/Theme.Dialog" />
-        <activity android:name=".ResultActivity" />
-        <activity android:name=".IntroActivity">
+        <activity android:name="com.AIProject.howstoday.ResultActivity" />
+        <activity android:name="com.AIProject.howstoday.IntroActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -35,12 +35,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".AcceptIMGActivity"
+            android:name="com.AIProject.howstoday.AcceptIMGActivity"
             android:screenOrientation="portrait" />
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-6496448515336559~4615370032" />
+            android:value="@string/admob_app_id" />
     </application>
 
 </manifest>
