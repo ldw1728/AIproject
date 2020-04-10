@@ -37,7 +37,7 @@ public class ResultActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
-        AccepIMGActivity.finish();
+        //AccepIMGActivity.finish();
         initComponent();
         SharedPreferences sp = getSharedPreferences("userImage", MODE_PRIVATE);
         String img_str = sp.getString("img", "");
@@ -46,7 +46,8 @@ public class ResultActivity extends AppCompatActivity {
         btn_home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AcceptIMGActivity.goToOtherActivity(ResultActivity.this, AcceptIMGActivity.class, null);
+                //AcceptIMGActivity.goToOtherActivity(ResultActivity.this, AcceptIMGActivity.class, null);
+                onBackPressed();
             }
         });
 
@@ -56,8 +57,6 @@ public class ResultActivity extends AppCompatActivity {
                 AcceptIMGActivity.goToOtherActivity(ResultActivity.this, UserBoardActivity.class, null);
             }
         });
-
-
 
         resultValue = getIntent().getStringExtra("resultValue"); //결과 값.
 
@@ -93,10 +92,6 @@ public class ResultActivity extends AppCompatActivity {
                         AcceptIMGActivity.goToOtherActivity(ResultActivity.this, UserBoardActivity.class, null);
                     }
                 });
-
-
-
-
             }
         }
     }

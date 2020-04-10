@@ -17,10 +17,10 @@ import java.util.HashMap;
 public class UserBoardAdapter extends RecyclerView.Adapter<UserBoardAdapter.Viewholder> {
 
     private ArrayList<BoardItem> items;
-    private Activity context;
+    private UserBoardActivity activity;
 
-    public UserBoardAdapter(Activity context){
-        this.context = context;
+    public UserBoardAdapter(UserBoardActivity activity){
+        this.activity = activity;
     }
 
 
@@ -43,7 +43,7 @@ public class UserBoardAdapter extends RecyclerView.Adapter<UserBoardAdapter.View
         holder.card_usercard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AcceptIMGActivity.goToOtherActivity(context, DetailActivity.class, new HashMap(){{put("item", items.get(position));} });
+                AcceptIMGActivity.goToOtherActivity(activity, DetailActivity.class, new HashMap(){{put("item", items.get(position));} });
             }
         });
     }

@@ -56,7 +56,6 @@ public class DBController {
                       items.add(item);
                   }
                     c.accept(items);
-
                 }
             }
 

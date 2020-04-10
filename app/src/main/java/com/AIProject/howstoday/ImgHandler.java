@@ -16,8 +16,6 @@ public class ImgHandler implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-
-
     static public String bitmapToString(Bitmap bitmap){
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         bitmap.compress(Bitmap.CompressFormat.PNG, 100,baos);
@@ -39,7 +37,7 @@ public class ImgHandler implements Serializable {
 
     static public byte[] BitmapToByte(Bitmap img){
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
-        img.compress(Bitmap.CompressFormat.PNG, 100,bos);
+        img.compress(Bitmap.CompressFormat.JPEG, 100,bos);
         byte[] result = bos.toByteArray();
         return result;
     }
