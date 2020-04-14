@@ -16,3 +16,6 @@ serveer : AWS ec2, python flask, Firebase RealTime DataBase, Firebase Authentica
 *  Firebase Authentication 이용하여 로그인
 * 사용자의 사진은 aws ec2서버로 전송, 서버는 flask를 이용하여 http request를 받음.
 * 받은 이미지는 ai알고리즘을 거쳐 나온 평가값을 다시 앱으로 response 해준다.
+* 앱에서 받은 평가값을 클라이언트에게 보여준다.  
+* firebase DataBase를 이용하여 사용자들이 업로드한 게시물들을 관리.
+
