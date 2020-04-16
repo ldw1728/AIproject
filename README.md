@@ -19,3 +19,6 @@ serveer : AWS ec2, python flask, Firebase RealTime DataBase, Firebase Authentica
 * 앱에서 받은 평가값을 클라이언트에게 보여준다.  
 * firebase DataBase를 이용하여 사용자들이 업로드한 게시물들을 관리.
 
+## 구동화면
+
+
