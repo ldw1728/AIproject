@@ -54,6 +54,7 @@ public class AcceptIMGActivity extends AppCompatActivity {
     private ImageButton btn_cancel;
     private ImageButton btn_start;
     private ImageButton ib_camera;
+    private ImageButton ib_GoToBoard;
     //private ImageView userImgView;
     //private String UUID;
 
@@ -61,7 +62,7 @@ public class AcceptIMGActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        //setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_acceptimg);
         requestPermission();
         new DBController();
@@ -71,6 +72,7 @@ public class AcceptIMGActivity extends AppCompatActivity {
 
         btn_album = (ImageButton) findViewById(R.id.btn_album);
         ib_camera = findViewById(R.id.ib_camera);
+        ib_GoToBoard = findViewById(R.id.ib_GoToBoard);
         //userImgView = (ImageView) findViewById(R.id.img_user);
         btn_start = (ImageButton) findViewById(R.id.btn_start);
         btn_start.setEnabled(false);
@@ -79,6 +81,7 @@ public class AcceptIMGActivity extends AppCompatActivity {
         ib_camera.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                requestPermission();
                 Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                 startActivityForResult(intent, CAMERA);
             }
@@ -109,6 +112,13 @@ public class AcceptIMGActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
                 else Toast.makeText(getApplicationContext(), "사진을 등록해 주세요", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        ib_GoToBoard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToOtherActivity(AcceptIMGActivity.this, UserBoardActivity.class, null);
             }
         });
     }
@@ -240,7 +250,7 @@ public class AcceptIMGActivity extends AppCompatActivity {
        int pc1= ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
        int pc2= ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA);
 
-       if(pc1 == PackageManager.PERMISSION_GRANTED || pc2 == PackageManager.PERMISSION_GRANTED){
+       if(pc1 == PackageManager.PERMISSION_GRANTED && pc2 == PackageManager.PERMISSION_GRANTED){
 
        }else{
            //권한설정 dialog에서 거부를 누르면
@@ -257,8 +267,7 @@ public class AcceptIMGActivity extends AppCompatActivity {
                Toast.makeText(getApplicationContext(), "카메라 권한이 필요합니다", Toast.LENGTH_SHORT).show();
 
            }
-           ActivityCompat.requestPermissions(this, new String[]{ Manifest.permission.WRITE_EXTERNAL_STORAGE}, 0);
-           ActivityCompat.requestPermissions(this, new String[]{ Manifest.permission.CAMERA}, 0);
+           ActivityCompat.requestPermissions(this, new String[]{ Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.CAMERA}, 0);
        }
 
    }

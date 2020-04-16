@@ -36,7 +36,7 @@ public class ImgHandler implements Serializable {
     }
 
     static public byte[] BitmapToByte(Bitmap img){
-        ByteArrayOutputStream bos = new ByteArrayOutputStream();
+        ByteArrayOutputStream bos  = new ByteArrayOutputStream();
         img.compress(Bitmap.CompressFormat.JPEG, 100,bos);
         byte[] result = bos.toByteArray();
         return result;
