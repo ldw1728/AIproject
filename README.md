@@ -20,5 +20,9 @@ serveer : AWS ec2, python flask, Firebase RealTime DataBase, Firebase Authentica
 * firebase DataBase를 이용하여 사용자들이 업로드한 게시물들을 관리.
 
 ## 구동화면
-
+<img src="/htd/Screenshot_1587017076.png" width="200" height="350"></img>
+<img src="/htd/Screenshot_1575784255.png" width="200" height="350"></img>
+<img src="/htd/Screenshot_1575784289.png" width="200" height="350"></img>
+<img src="/htd/Screenshot_1575784311.png" width="200" height="350"></img>
+<img src="/htd/Screenshot_1587019223.png" width="200" height="350"></img>
 
