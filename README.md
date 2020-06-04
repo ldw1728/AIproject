@@ -4,10 +4,10 @@
 내용 : 구현된 AI알고리즘을 테스트하기 위한 어플리케이션이며 패션관련 이미지들을 학습시켜 시용자의 사진을 평가해주는 기능을 가지고 있으며, 각 사용자들 서로의 사진을 확인 및 평점을 매기는 기능을 구현.
 
 ## 역할
-AI관련 알고리즘을 제외한 
-android studio를 이용한 사용자 어플리케이션
-flask, aws ec2 관련 서버 연동
-firebase와 어플리케이션 연동
+AI관련 알고리즘을 제외한   
+android studio를 이용한 사용자 어플리케이션    
+flask, aws ec2 관련 서버 연동    
+firebase와 어플리케이션 연동    
 
 ## 기술
 client : android studio(java)    
